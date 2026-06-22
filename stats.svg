@@ -9,13 +9,13 @@
   </style>
   <rect class="bg" x="0.5" y="0.5" width="494" height="174" rx="4.5"/>
   <text x="25" y="35" class="title">
-    TJ Sayles &#8212; PLT Contributions (past year)
+    TJ Sayles &#8212; PLT Contributions (all-time)
   </text>
-  <text x="55"  y="88" class="val">3</text>
+  <text x="55"  y="88" class="val">294</text>
   <text x="55"  y="105" class="lbl">Commits</text>
-  <text x="175" y="88" class="val">3</text>
+  <text x="175" y="88" class="val">227</text>
   <text x="175" y="105" class="lbl">Pull Requests</text>
-  <text x="315" y="88" class="val">2</text>
+  <text x="315" y="88" class="val">299</text>
   <text x="315" y="105" class="lbl">Issues</text>
   <text x="415" y="88" class="val">0</text>
   <text x="415" y="105" class="lbl">Stars</text>
