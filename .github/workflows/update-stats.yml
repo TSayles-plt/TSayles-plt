@@ -1,0 +1,50 @@
+name: Update Stats SVG
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Every Monday at 06:00 UTC
+  workflow_dispatch:        # Manual trigger from Actions tab
+
+# Required secrets:
+#   STATS_TOKEN — fine-grained PAT owned by TSayles-plt
+#                 Repository: TSayles-plt/TSayles-plt, Contents: Read-only
+#                 (only needs API auth; GITHUB_TOKEN handles the push)
+#
+# One-time baseline capture (run locally before tsayles leaves PLT org):
+#   GH_TOKEN=<tsayles PAT with PLT org access> \
+#     python scripts/generate_stats.py --capture-baseline
+#   Then commit scripts/tsayles_baseline.json to this repo.
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate stats SVG
+        env:
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: python scripts/generate_stats.py
+
+      - name: Commit and push SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "github-actions[bot]@users.noreply.github.com"
+          git add stats.svg
+          git diff --cached --quiet \
+            || git commit -m "chore: update stats SVG [skip ci]"
+          git push
+
