@@ -1,0 +1,26 @@
+<svg width="495" height="175" viewBox="0 0 495 175"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg    { fill:#fff; stroke:#e4e2e2; stroke-width:1; }
+    .title { font:600 16px "Segoe UI",Ubuntu,Sans-Serif; fill:#2f80ed; }
+    .val   { font:700 22px "Segoe UI",Ubuntu,Sans-Serif; fill:#333; }
+    .lbl   { font:400 12px "Segoe UI",Ubuntu,Sans-Serif; fill:#555; }
+    .note  { font:400 11px "Segoe UI",Ubuntu,Sans-Serif; fill:#999; }
+  </style>
+  <rect class="bg" x="0.5" y="0.5" width="494" height="174" rx="4.5"/>
+  <text x="25" y="35" class="title">
+    TJ Sayles &#8212; PLT Contributions (past year)
+  </text>
+  <text x="55"  y="88" class="val">3</text>
+  <text x="55"  y="105" class="lbl">Commits</text>
+  <text x="175" y="88" class="val">3</text>
+  <text x="175" y="105" class="lbl">Pull Requests</text>
+  <text x="315" y="88" class="val">2</text>
+  <text x="315" y="105" class="lbl">Issues</text>
+  <text x="415" y="88" class="val">0</text>
+  <text x="415" y="105" class="lbl">Stars</text>
+  <text x="25" y="138" class="note">
+    @TSayles-plt (Jun 2026+) + @tsayles baseline (PowerLightTech, prior work)
+  </text>
+  <text x="25" y="155" class="note">Updated: 2026-06-22</text>
+</svg>
